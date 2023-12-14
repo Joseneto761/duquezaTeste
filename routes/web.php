@@ -2,19 +2,16 @@
 
 use Illuminate\Http\Client\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\HomeController;   
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ServicesController;
 
 
 Route::get('/', function () {
-    return view('index');
+    return view('home');
 });
 
-Route::get('/inicio', [HomeController::class,'inicio'] {
-    return view '/'
-   
-});
+Route::get('/services', [ServicesController::class, 'index'])->name('services.page');
+Route::get('/service-create', [ServicesController::class, 'create'])->name('service.create');
 
-Route::post('/inicio/cadastrar-produto', function (Request $request){
-    dd($request->all());
-});
+Route::post('/service-store', [ServicesController::class, 'store'])->name('service.store');
 
