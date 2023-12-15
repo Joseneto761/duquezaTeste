@@ -9,7 +9,7 @@ class Service extends Model
 {
     protected $table = 'services';
 
-    protected $fillable = ['name', 'description', 'hotness', 'media_content', 'created_at', 'updated'];
+    protected $fillable = ['name', 'description', 'hotness', 'image_path', 'created_at', 'updated'];
 
     use HasFactory;
 }

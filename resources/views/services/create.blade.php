@@ -12,17 +12,20 @@
 </head>
 
 <body>
-    <form method="POST" action={{route('service.store')}} class="flex flex-col w-[10rem]">
+    <form method="POST" action={{route('service.store')}} enctype='multipart/form-data' class="flex flex-col w-[10rem]">
         @csrf
 
         <label for="name">Name</label>
-        <input type="text" name="name" id="name">
+        <input type="text" name="name" id="name" required>
 
         <label for="description">Description</label>
-        <input type="text" name="description" id="description">
+        <input type="text" name="description" id="description" required>
 
         <label for="hotness">Hotness</label>
-        <input type="text" name="hotness" id="hotness">
+        <input type="text" name="hotness" id="hotness" required>
+
+        <label for="image">Image</label>
+        <input type="file" name="image" id="image" required>
 
         <button type="submit">Create Service</button>
     </form>

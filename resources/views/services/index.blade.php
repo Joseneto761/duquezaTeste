@@ -17,7 +17,7 @@
             <p>{{ $service->name }}</p>
             <p>{{ $service->description }}</p>
             <p>{{ $service->hotness }}</p>
-            <img src={{ $service->media_content }} alt="">
+            <img src={{ $service->image_path }} alt="">
         </div>
     @endforeach
 </body>
